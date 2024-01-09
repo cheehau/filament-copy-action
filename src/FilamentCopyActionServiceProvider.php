@@ -64,6 +64,8 @@ class FilamentCopyActionServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
+        CopyableAction::make();
+
         // Asset Registration
         FilamentAsset::register(
             $this->getAssets(),
