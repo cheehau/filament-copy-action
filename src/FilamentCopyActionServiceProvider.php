@@ -103,8 +103,8 @@ class FilamentCopyActionServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('filament-copy-action', __DIR__ . '/../resources/dist/components/filament-copy-action.js'),
-            Css::make('filament-copy-action-styles', __DIR__ . '/../resources/dist/filament-copy-action.css'),
-            Js::make('filament-copy-action-scripts', __DIR__ . '/../resources/dist/filament-copy-action.js'),
+            // Css::make('filament-copy-action-styles', __DIR__ . '/../resources/dist/filament-copy-action.css'),
+            // Js::make('filament-copy-action-scripts', __DIR__ . '/../resources/dist/filament-copy-action.js'),
         ];
     }
 
