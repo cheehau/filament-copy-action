@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Cheehau\FilamentCopyAction\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentCopyActionCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-copy-action';
 
     public $description = 'My command';
 
