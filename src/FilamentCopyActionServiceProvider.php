@@ -2,6 +2,8 @@
 
 namespace Cheehau\FilamentCopyAction;
 
+use Cheehau\FilamentCopyAction\Commands\FilamentCopyActionCommand;
+use Cheehau\FilamentCopyAction\Testing\TestsFilamentCopyAction;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -13,8 +15,6 @@ use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Cheehau\FilamentCopyAction\Commands\FilamentCopyActionCommand;
-use Cheehau\FilamentCopyAction\Testing\TestsFilamentCopyAction;
 
 class FilamentCopyActionServiceProvider extends PackageServiceProvider
 {
@@ -82,7 +82,7 @@ class FilamentCopyActionServiceProvider extends PackageServiceProvider
 
         // Handle Stubs
         if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
+            foreach (app(Filesystem::class)->files(__DIR__.'/../stubs/') as $file) {
                 $this->publishes([
                     $file->getRealPath() => base_path("stubs/filament-copy-action/{$file->getFilename()}"),
                 ], 'filament-copy-action-stubs');
