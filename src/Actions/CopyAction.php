@@ -4,6 +4,8 @@ namespace Cheehau\FilamentCopyAction\Actions;
 
 use Filament\Actions\Action as BaseAction;
 use Filament\Support\Concerns;
+use Illuminate\Support\HtmlString;
+use Illuminate\Support\Js;
 
 class CopyAction extends BaseAction
 {
