@@ -11,6 +11,8 @@ class CopyAction extends BaseAction
 {
     use Concerns\CanBeCopied;
 
+    protected mixed $content = null;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -21,9 +23,21 @@ class CopyAction extends BaseAction
             ->livewireClickHandlerEnabled(false)
             ->extraAttributes(fn () => [
                 'x-on:click' => new HtmlString(
-                    'window.navigator.clipboard.writeText('.Js::from($this->getCopyableState(null)).');'
+                    'window.navigator.clipboard.writeText('.Js::from($this->getContent()).');'
                     .(($title = $this->getSuccessNotificationTitle()) ? ' $tooltip('.Js::from($title).');' : '')
                 ),
             ]);
+    }
+
+    public function content(mixed $content): static
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    public function getContent(): mixed
+    {
+        return $this->evaluate($this->content);
     }
 }
