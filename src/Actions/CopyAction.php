@@ -23,7 +23,7 @@ class CopyAction extends BaseAction
             ->extraAttributes(fn () => [
                 'x-on:click' => new HtmlString(
                     'window.navigator.clipboard.writeText('.Js::from($this->getContent()).');'
-                    .(($message = $this->getCopyMessage()) ? ' $tooltip('.Js::from($message).');' : '')
+                    .(($message = $this->getCopyMessage(null)) ? ' $tooltip('.Js::from($message).');' : '')
                 ),
             ]);
     }
