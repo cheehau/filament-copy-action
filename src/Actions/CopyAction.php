@@ -18,6 +18,7 @@ class CopyAction extends BaseAction
         $this
             ->successNotificationTitle(__('Copied!'))
             ->icon('heroicon-o-clipboard-document')
+            ->livewireClickHandlerEnabled(false)
             ->extraAttributes(fn () => [
                 'x-on:click' => new HtmlString(
                     'window.navigator.clipboard.writeText('.Js::from($this->getCopyableState(null)).');'
