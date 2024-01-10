@@ -17,11 +17,10 @@ class CopyAction extends BaseAction
 
         $this
             ->successNotificationTitle(__('Copied!'))
-            ->icon('heroicon-o-clipboard-copy')
+            ->icon('heroicon-o-clipboard-document')
             ->extraAttributes(fn () => [
-                'x-data' => '',
                 'x-on:click' => new HtmlString(
-                    'window.navigator.clipboard.writeText('.Js::from($this->getCopyableState()).');'
+                    'window.navigator.clipboard.writeText('.Js::from($this->getCopyableState(null)).');'
                     .(($title = $this->getSuccessNotificationTitle()) ? ' $tooltip('.Js::from($title).');' : '')
                 ),
             ]);

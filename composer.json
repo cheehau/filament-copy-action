@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Cheehau\\FilamentCopyAction\\": "src/",
-            "Cheehau\\FilamentCopyAction\\Database\\Factories\\": "database/factories/"
+            "Cheehau\\FilamentCopyAction\\": "src/"
         }
     },
     "autoload-dev": {
@@ -59,10 +58,7 @@
         "laravel": {
             "providers": [
                 "Cheehau\\FilamentCopyAction\\FilamentCopyActionServiceProvider"
-            ],
-            "aliases": {
-                "FilamentCopyAction": "Cheehau\\FilamentCopyAction\\Facades\\FilamentCopyAction"
-            }
+            ]
         }
     },
     "minimum-stability": "stable",
