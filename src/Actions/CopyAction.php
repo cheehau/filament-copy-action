@@ -9,7 +9,7 @@ use Filament\Forms\Form;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Database\Eloquent\Model;
 
-class CreateAction extends Action
+class CopyAction extends Action
 {
     use CanCustomizeProcess;
 
