@@ -21,7 +21,7 @@ class CopyAction extends BaseAction
             ->extraAttributes(fn () => [
                 'x-data' => '',
                 'x-on:click' => new HtmlString(
-                    'window.navigator.clipboard.writeText('.Js::from($this->getCopyable()).');'
+                    'window.navigator.clipboard.writeText('.Js::from($this->getCopyableState()).');'
                     .(($title = $this->getSuccessNotificationTitle()) ? ' $tooltip('.Js::from($title).');' : '')
                 ),
             ]);
