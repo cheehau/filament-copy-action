@@ -2,6 +2,7 @@
 
 namespace Cheehau\FilamentCopyAction;
 
+use Cheehau\FilamentCopyAction\Actions\CopyableAction;
 use Cheehau\FilamentCopyAction\Commands\FilamentCopyActionCommand;
 use Cheehau\FilamentCopyAction\Testing\TestsFilamentCopyAction;
 use Filament\Support\Assets\AlpineComponent;
