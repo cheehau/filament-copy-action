@@ -2,7 +2,6 @@
 
 namespace Cheehau\FilamentCopyAction;
 
-use Cheehau\FilamentCopyAction\Actions\CopyableAction;
 use Cheehau\FilamentCopyAction\Commands\FilamentCopyActionCommand;
 use Cheehau\FilamentCopyAction\Testing\TestsFilamentCopyAction;
 use Filament\Support\Assets\AlpineComponent;
@@ -65,8 +64,6 @@ class FilamentCopyActionServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-        CopyableAction::make();
-
         // Asset Registration
         FilamentAsset::register(
             $this->getAssets(),
