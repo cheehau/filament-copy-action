@@ -13,7 +13,7 @@ class CreateAction extends Action
 {
     use CanCustomizeProcess;
 
-    protected bool | Closure $canCreateAnother = true;
+    protected bool|Closure $canCreateAnother = true;
 
     protected ?Closure $getRelationshipUsing = null;
 
