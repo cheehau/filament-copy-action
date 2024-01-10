@@ -18,6 +18,10 @@ CopyAction::make('test')
     ->copyMessage('Copied!!')
 ```
 
+## Credits
+
+-   Inspired by [Copy Actions](https://github.com/webbingbrasil/filament-copyactions)
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
