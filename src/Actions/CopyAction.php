@@ -2,8 +2,8 @@
 
 namespace Cheehau\FilamentCopyAction\Actions;
 
-use Filament\Support\Concerns;
 use Filament\Actions\Action as BaseAction;
+use Filament\Support\Concerns;
 
 class CopyAction extends BaseAction
 {
