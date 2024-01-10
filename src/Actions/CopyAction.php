@@ -22,7 +22,7 @@ class CopyAction extends BaseAction
                 'x-data' => '',
                 'x-on:click' => new HtmlString(
                     'window.navigator.clipboard.writeText('.Js::from($this->getCopyable()).');'
-                    . (($title = $this->getSuccessNotificationTitle()) ? ' $tooltip('.Js::from($title).');' : '')
+                    .(($title = $this->getSuccessNotificationTitle()) ? ' $tooltip('.Js::from($title).');' : '')
                 ),
             ]);
     }
